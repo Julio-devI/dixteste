@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'auth.admin'])->group(function () {
+Route::middleware(['auth', 'authadmin'])->group(function () {
     Route::get('/admin/dashboard', Admindashboard::class)->name('admin.dashboard');
     Route::get('/admin/noticias');
 });

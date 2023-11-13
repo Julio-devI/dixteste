@@ -1,382 +1,341 @@
-@extends('layouts.app', ['pageSlug' => 'dashboard'])
+<div class="layout-page">
+    <!-- Navbar -->
 
-@section('content')
-    <div class="row">
-        <div class="col-12">
-            <div class="card card-chart">
-                <div class="card-header ">
-                    <div class="row">
-                        <div class="col-sm-6 text-left">
-                            <h5 class="card-category">Total Shipments</h5>
-                            <h2 class="card-title">Performance</h2>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary btn-simple active" id="0">
-                                    <input type="radio" name="options" checked>
-                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Accounts</span>
-                                    <span class="d-block d-sm-none">
-                                    <i class="tim-icons icon-single-02"></i>
-                                </span>
-                                </label>
-                                <label class="btn btn-sm btn-primary btn-simple" id="1">
-                                    <input type="radio" class="d-none d-sm-none" name="options">
-                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Purchases</span>
-                                    <span class="d-block d-sm-none">
-                                    <i class="tim-icons icon-gift-2"></i>
-                                </span>
-                                </label>
-                                <label class="btn btn-sm btn-primary btn-simple" id="2">
-                                    <input type="radio" class="d-none" name="options">
-                                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Sessions</span>
-                                    <span class="d-block d-sm-none">
-                                    <i class="tim-icons icon-tap-02"></i>
-                                </span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="chartBig1"></canvas>
-                    </div>
-                </div>
-            </div>
+    <nav
+        class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+        id="layout-navbar">
+        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+            </a>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="card card-chart">
-                <div class="card-header">
-                    <h5 class="card-category">Total Shipments</h5>
-                    <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
-                </div>
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="chartLinePurple"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card card-chart">
-                <div class="card-header">
-                    <h5 class="card-category">Daily Sales</h5>
-                    <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500€</h3>
-                </div>
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="CountryChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card card-chart">
-                <div class="card-header">
-                    <h5 class="card-category">Completed Tasks</h5>
-                    <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 12,100K</h3>
-                </div>
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="chartLineGreen"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-6 col-md-12">
-            <div class="card card-tasks">
-                <div class="card-header ">
-                    <h6 class="title d-inline">Tasks(5)</h6>
-                    <p class="card-category d-inline">today</p>
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-toggle="dropdown">
-                            <i class="tim-icons icon-settings-gear-63"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#pablo">Action</a>
-                            <a class="dropdown-item" href="#pablo">Another action</a>
-                            <a class="dropdown-item" href="#pablo">Something else</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body ">
-                    <div class="table-full-width table-responsive">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="">
-                                            <span class="form-check-sign">
-                                                    <span class="check"></span>
-                                                </span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="title">Update the Documentation</p>
-                                    <p class="text-muted">Dwuamish Head, Seattle, WA 8:47 AM</p>
-                                </td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                                        <i class="tim-icons icon-pencil"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="" checked="">
-                                            <span class="form-check-sign">
-                                                    <span class="check"></span>
-                                                </span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="title">GDPR Compliance</p>
-                                    <p class="text-muted">The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.</p>
-                                </td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                                        <i class="tim-icons icon-pencil"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="">
-                                            <span class="form-check-sign">
-                                                        <span class="check"></span>
-                                                    </span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="title">Solve the issues</p>
-                                    <p class="text-muted">Fifty percent of all respondents said they would be more likely to shop at a company </p>
-                                </td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                                        <i class="tim-icons icon-pencil"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="">
-                                            <span class="form-check-sign">
-                                                    <span class="check"></span>
-                                                </span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="title">Release v2.0.0</p>
-                                    <p class="text-muted">Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM</p>
-                                </td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                                        <i class="tim-icons icon-pencil"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="">
-                                            <span class="form-check-sign">
-                                                    <span class="check"></span>
-                                                </span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="title">Export the processed files</p>
-                                    <p class="text-muted">The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs. </p>
-                                </td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                                        <i class="tim-icons icon-pencil"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="">
-                                            <span class="form-check-sign">
-                                                    <span class="check"></span>
-                                                </span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="title">Arival at export process</p>
-                                    <p class="text-muted">Capitol Hill, Seattle, WA 12:34 AM</p>
-                                </td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                                        <i class="tim-icons icon-pencil"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
-            <div class="card ">
-                <div class="card-header">
-                    <h4 class="card-title">Simple Table</h4>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table tablesorter" id="">
-                            <thead class=" text-primary">
-                            <tr>
-                                <th>
-                                    Name
-                                </th>
-                                <th>
-                                    Country
-                                </th>
-                                <th>
-                                    City
-                                </th>
-                                <th class="text-center">
-                                    Salary
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    Dakota Rice
-                                </td>
-                                <td>
-                                    Niger
-                                </td>
-                                <td>
-                                    Oud-Turnhout
-                                </td>
-                                <td class="text-center">
-                                    $36,738
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Minerva Hooper
-                                </td>
-                                <td>
-                                    Curaçao
-                                </td>
-                                <td>
-                                    Sinaai-Waas
-                                </td>
-                                <td class="text-center">
-                                    $23,789
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Sage Rodriguez
-                                </td>
-                                <td>
-                                    Netherlands
-                                </td>
-                                <td>
-                                    Baileux
-                                </td>
-                                <td class="text-center">
-                                    $56,142
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Philip Chaney
-                                </td>
-                                <td>
-                                    Korea, South
-                                </td>
-                                <td>
-                                    Overland Park
-                                </td>
-                                <td class="text-center">
-                                    $38,735
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Doris Greene
-                                </td>
-                                <td>
-                                    Malawi
-                                </td>
-                                <td>
-                                    Feldkirchen in Kärnten
-                                </td>
-                                <td class="text-center">
-                                    $63,542
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Mason Porter
-                                </td>
-                                <td>
-                                    Chile
-                                </td>
-                                <td>
-                                    Gloucester
-                                </td>
-                                <td class="text-center">
-                                    $78,615
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Jon Porter
-                                </td>
-                                <td>
-                                    Portugal
-                                </td>
-                                <td>
-                                    Gloucester
-                                </td>
-                                <td class="text-center">
-                                    $98,615
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
 
-@push('js')
-    <script src="{{ asset('white') }}/js/plugins/chartjs.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            demo.initDashboardPageCharts();
-        });
-    </script>
-@endpush
-<?php
+        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                    <i class="bx bx-search fs-4 lh-0"></i>
+                    <input
+                        type="text"
+                        class="form-control border-0 shadow-none ps-1 ps-sm-2"
+                        placeholder="Search..."
+                        aria-label="Search..." />
+                </div>
+            </div>
+            <!-- /Search -->
+
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+                <li class="nav-item lh-1 me-3">
+                    <a
+                        class="github-button"
+                        href="https://github.com/themeselection/sneat-html-admin-template-free"
+                        data-icon="octicon-star"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
+                    >Star</a
+                    >
+                </li>
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                        <div class="avatar avatar-online">
+                            <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar avatar-online">
+                                            <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <span class="fw-medium d-block">John Doe</span>
+                                        <small class="text-muted">Admin</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown-divider"></div>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bx bx-user me-2"></i>
+                                <span class="align-middle">My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bx bx-cog me-2"></i>
+                                <span class="align-middle">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                          <span class="flex-grow-1 align-middle ms-1">Billing</span>
+                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                        </span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown-divider"></div>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:void(0);">
+                                <i class="bx bx-power-off me-2"></i>
+                                <span class="align-middle">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--/ User -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- / Navbar -->
+
+    <!-- Content wrapper -->
+    <div class="content-wrapper">
+        <!-- Content -->
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="py-3 mb-4"><span class="text-muted fw-light">Noticias /</span> Todos</h4>
+
+            <!-- Basic Bootstrap Table -->
+            <div class="card">
+                <h5 class="card-header">Noticias</h5>
+                <div class="table-responsive text-nowrap">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Titulo</th>
+                            <th>Subtitulo</th>
+                            <th>Usuario</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                        <tr>
+                            <td>
+                                <i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                <span class="fw-medium">Angular Project</span>
+                            </td>
+                            <td>Albert Cook</td>
+                            <td>
+                                <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Sophia Wilkerson">
+                                        <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Christina Parker">
+                                        <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><span class="badge bg-label-primary me-1">Active</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                                        >
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-1"></i> Delete</a
+                                        >
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fab fa-react fa-lg text-info me-3"></i> <span class="fw-medium">React Project</span>
+                            </td>
+                            <td>Barry Hunter</td>
+                            <td>
+                                <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Sophia Wilkerson">
+                                        <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Christina Parker">
+                                        <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><span class="badge bg-label-success me-1">Completed</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-2"></i> Edit</a
+                                        >
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-2"></i> Delete</a
+                                        >
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fab fa-vuejs fa-lg text-success me-3"></i>
+                                <span class="fw-medium">VueJs Project</span>
+                            </td>
+                            <td>Trevor Baker</td>
+                            <td>
+                                <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Sophia Wilkerson">
+                                        <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Christina Parker">
+                                        <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><span class="badge bg-label-info me-1">Scheduled</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-2"></i> Edit</a
+                                        >
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-2"></i> Delete</a
+                                        >
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fab fa-bootstrap fa-lg text-primary me-3"></i>
+                                <span class="fw-medium">Bootstrap Project</span>
+                            </td>
+                            <td>Jerry Milton</td>
+                            <td>
+                                <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Sophia Wilkerson">
+                                        <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                    <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Christina Parker">
+                                        <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><span class="badge bg-label-warning me-1">Pending</span></td>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-2"></i> Edit</a
+                                        >
+                                        <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-2"></i> Delete</a
+                                        >
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- / Content -->
+        <div class="content-backdrop fade"></div>
+    </div>
+    <!-- Content wrapper -->
+</div>

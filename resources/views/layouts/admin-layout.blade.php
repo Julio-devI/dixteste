@@ -116,7 +116,7 @@
                     <ul class="menu-sub">
                         <li class="menu-item active">
                             <a href="index.html" class="menu-link">
-                                <div data-i18n="Analytics">Analytics</div>
+                                <div data-i18n="Analytics">Noticias</div>
                             </a>
                         </li>
                     </ul>
@@ -126,13 +126,13 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-layout"></i>
-                        <div data-i18n="Layouts">Catálogo</div>
+                        <div data-i18n="Layouts">Noticias</div>
                     </a>
 
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="#" class="menu-link">
-                                <div data-i18n="Without menu">Produtos</div>
+                                <div data-i18n="Without menu">Adicionar</div>
                             </a>
                         </li>
                         <li class="menu-item">
@@ -656,26 +656,6 @@
                     <a href="tables-basic.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-table"></i>
                         <div data-i18n="Tables">Tables</div>
-                    </a>
-                </li>
-                <!-- Misc -->
-                <li class="menu-header small text-uppercase"><span class="menu-header-text">Gerenciamento de usuários</span></li>
-                <li class="menu-item">
-                    <a
-                        href="{{ route('admin.clients') }}"
-                        target="_blank"
-                        class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-support"></i>
-                        <div data-i18n="Support">Support</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a
-                        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
-                        target="_blank"
-                        class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-file"></i>
-                        <div data-i18n="Documentation">Documentation</div>
                     </a>
                 </li>
             </ul>

@@ -187,7 +187,7 @@
                                                 @auth()
                                                     @if(Auth::user()->utype === 'ADM')
                                                         <li>
-                                                            <a href="{{ route('admin_dashboard') }}" class="d-block">Dashboard</a>
+                                                            <a href="#" class="d-block">Dashboard</a>
                                                         </li>
                                                     @else
                                                         <li>
