@@ -115,8 +115,8 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item active">
-                            <a href="index.html" class="menu-link">
-                                <div data-i18n="Analytics">Noticias</div>
+                            <a href="{{ route('admin.add.noticias') }}" class="menu-link">
+                                <div data-i18n="Analytics">Adicionar Noticias</div>
                             </a>
                         </li>
                     </ul>
