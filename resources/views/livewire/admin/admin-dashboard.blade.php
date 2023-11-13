@@ -121,7 +121,6 @@
                             <th>Titulo</th>
                             <th>Subtitulo</th>
                             <th>Usuario</th>
-                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                         </thead>

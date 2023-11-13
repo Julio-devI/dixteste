@@ -126,96 +126,96 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-layout"></i>
-                        <div data-i18n="Layouts">Noticias</div>
+                        <div data-i18n="Layouts">Lorem Ipsum</div>
                     </a>
 
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="#" class="menu-link">
-                                <div data-i18n="Without menu">Adicionar</div>
+                                <div data-i18n="Without menu">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="layouts-without-navbar.html" class="menu-link">
-                                <div data-i18n="Without navbar">Serviços</div>
+                                <div data-i18n="Without navbar">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="layouts-container.html" class="menu-link">
-                                <div data-i18n="Container">Combo</div>
+                                <div data-i18n="Container">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="#" class="menu-link">
-                                <div data-i18n="Fluid">Categorias</div>
+                                <div data-i18n="Fluid">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="layouts-blank.html" class="menu-link">
-                                <div data-i18n="Blank">Marcas</div>
+                                <div data-i18n="Blank">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="layouts-blank.html" class="menu-link">
-                                <div data-i18n="Blank">Unidades de Medida</div>
+                                <div data-i18n="Blank">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="layouts-blank.html" class="menu-link">
-                                <div data-i18n="Blank">Impressão de Etiquetas</div>
+                                <div data-i18n="Blank">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="menu-header small text-uppercase">
-                    <span class="menu-header-text">Vendas</span>
+                    <span class="menu-header-text">Lorem Ipsum</span>
                 </li>
                 <!-- Pages -->
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                        <div data-i18n="Account Settings">Orçamentos</div>
+                        <div data-i18n="Account Settings">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="pages-account-settings-account.html" class="menu-link">
-                                <div data-i18n="Account">Pedidos</div>
+                                <div data-i18n="Account">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-notifications.html" class="menu-link">
-                                <div data-i18n="Notifications">Cupons</div>
+                                <div data-i18n="Notifications">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Consignados</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Clientes</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">CRM</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Comissões</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Devoluções</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Lista de preços</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -223,42 +223,42 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                        <div data-i18n="Authentications">Estoque</div>
+                        <div data-i18n="Authentications">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Produção</div>
+                                <div data-i18n="Basic">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Consulta de estoque</div>
+                                <div data-i18n="Basic">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Movimentações</div>
+                                <div data-i18n="Basic">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Locais de estoque</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Tipos de estocagem</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Inventário</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Mapa de Estoque</div>
+                                <div data-i18n="Connections">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -266,157 +266,157 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-cube-alt"></i>
-                        <div data-i18n="Misc">Compras</div>
+                        <div data-i18n="Misc">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="pages-misc-error.html" class="menu-link">
-                                <div data-i18n="Error">Orçamentos</div>
+                                <div data-i18n="Error">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-misc-under-maintenance.html" class="menu-link">
-                                <div data-i18n="Under Maintenance">Pedidos</div>
+                                <div data-i18n="Under Maintenance">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-misc-under-maintenance.html" class="menu-link">
-                                <div data-i18n="Under Maintenance">Fornecedores</div>
+                                <div data-i18n="Under Maintenance">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-misc-under-maintenance.html" class="menu-link">
-                                <div data-i18n="Under Maintenance">Devoluções</div>
+                                <div data-i18n="Under Maintenance">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="pages-misc-under-maintenance.html" class="menu-link">
-                                <div data-i18n="Under Maintenance">Compras em aberto</div>
+                                <div data-i18n="Under Maintenance">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <!-- Components -->
-                <li class="menu-header small text-uppercase"><span class="menu-header-text">Financeiro</span></li>
+                <li class="menu-header small text-uppercase"><span class="menu-header-text">Lorem Ipsum</span></li>
                 <!-- Cards -->
                 <li class="menu-item">
                     <a href="cards-basic.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-collection"></i>
-                        <div data-i18n="Basic">Fluxo de caixa</div>
+                        <div data-i18n="Basic">Lorem Ipsum</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="cards-basic.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-collection"></i>
-                        <div data-i18n="Basic">Movimentação de caixa</div>
+                        <div data-i18n="Basic">Lorem Ipsum</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="cards-basic.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-collection"></i>
-                        <div data-i18n="Basic">Conciliação Bancária</div>
+                        <div data-i18n="Basic">Lorem Ipsum</div>
                     </a>
                 </li>
                 <!-- User interface -->
                 <li class="menu-item">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-box"></i>
-                        <div data-i18n="User interface">Pagamentos</div>
+                        <div data-i18n="User interface">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="ui-accordion.html" class="menu-link">
-                                <div data-i18n="Accordion">Contas a pagar</div>
+                                <div data-i18n="Accordion">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-alerts.html" class="menu-link">
-                                <div data-i18n="Alerts">Contas pagas</div>
+                                <div data-i18n="Alerts">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-badges.html" class="menu-link">
-                                <div data-i18n="Badges">Badges</div>
+                                <div data-i18n="Badges">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-buttons.html" class="menu-link">
-                                <div data-i18n="Buttons">Buttons</div>
+                                <div data-i18n="Buttons">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-carousel.html" class="menu-link">
-                                <div data-i18n="Carousel">Carousel</div>
+                                <div data-i18n="Carousel">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-collapse.html" class="menu-link">
-                                <div data-i18n="Collapse">Collapse</div>
+                                <div data-i18n="Collapse">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-dropdowns.html" class="menu-link">
-                                <div data-i18n="Dropdowns">Dropdowns</div>
+                                <div data-i18n="Dropdowns">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-footer.html" class="menu-link">
-                                <div data-i18n="Footer">Footer</div>
+                                <div data-i18n="Footer">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-list-groups.html" class="menu-link">
-                                <div data-i18n="List Groups">List groups</div>
+                                <div data-i18n="List Groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-modals.html" class="menu-link">
-                                <div data-i18n="Modals">Modals</div>
+                                <div data-i18n="Modals">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-navbar.html" class="menu-link">
-                                <div data-i18n="Navbar">Navbar</div>
+                                <div data-i18n="Navbar">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-offcanvas.html" class="menu-link">
-                                <div data-i18n="Offcanvas">Offcanvas</div>
+                                <div data-i18n="Offcanvas">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-pagination-breadcrumbs.html" class="menu-link">
-                                <div data-i18n="Pagination &amp; Breadcrumbs">Pagination &amp; Breadcrumbs</div>
+                                <div data-i18n="Pagination &amp; Breadcrumbs">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-progress.html" class="menu-link">
-                                <div data-i18n="Progress">Progress</div>
+                                <div data-i18n="Progress">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-spinners.html" class="menu-link">
-                                <div data-i18n="Spinners">Spinners</div>
+                                <div data-i18n="Spinners">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-tabs-pills.html" class="menu-link">
-                                <div data-i18n="Tabs &amp; Pills">Tabs &amp; Pills</div>
+                                <div data-i18n="Tabs &amp; Pills">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-toasts.html" class="menu-link">
-                                <div data-i18n="Toasts">Toasts</div>
+                                <div data-i18n="Toasts">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-tooltips-popovers.html" class="menu-link">
-                                <div data-i18n="Tooltips & Popovers">Tooltips &amp; popovers</div>
+                                <div data-i18n="Tooltips & Popovers">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="ui-typography.html" class="menu-link">
-                                <div data-i18n="Typography">Typography</div>
+                                <div data-i18n="Typography">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -426,17 +426,17 @@
                 <li class="menu-item">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-copy"></i>
-                        <div data-i18n="Extended UI">Recebimentos</div>
+                        <div data-i18n="Extended UI">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="extended-ui-perfect-scrollbar.html" class="menu-link">
-                                <div data-i18n="Perfect Scrollbar">Contas a receber</div>
+                                <div data-i18n="Perfect Scrollbar">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="extended-ui-text-divider.html" class="menu-link">
-                                <div data-i18n="Text Divider">Contas recebidas</div>
+                                <div data-i18n="Text Divider">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -445,53 +445,53 @@
                 <li class="menu-item">
                     <a href="icons-boxicons.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Boxicons">Boxicons</div>
+                        <div data-i18n="Boxicons">Lorem Ipsum</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
                     <a href="icons-boxicons.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Boxicons">Saldo e extrato</div>
+                        <div data-i18n="Boxicons">Lorem Ipsum</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
                     <a href="icons-boxicons.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Boxicons">Concilia fácil</div>
+                        <div data-i18n="Boxicons">Lorem Ipsum</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
                     <a href="icons-boxicons.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-crown"></i>
-                        <div data-i18n="Boxicons">Contabilidade</div>
+                        <div data-i18n="Boxicons">Lorem Ipsum</div>
                     </a>
                 </li>
 
                 <!-- Forms & Tables -->
-                <li class="menu-header small text-uppercase"><span class="menu-header-text">Relatórios</span></li>
+                <li class="menu-header small text-uppercase"><span class="menu-header-text">Lorem Ipsum</span></li>
                 <!-- Forms -->
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
-                        <div data-i18n="Form Elements">Financeiro</div>
+                        <div data-i18n="Form Elements">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="forms-basic-inputs.html" class="menu-link">
-                                <div data-i18n="Basic Inputs">Pagamentos</div>
+                                <div data-i18n="Basic Inputs">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Recebimentos</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">DRE gerencial simplificada</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -499,42 +499,42 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
-                        <div data-i18n="Form Elements">Vendas</div>
+                        <div data-i18n="Form Elements">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="forms-basic-inputs.html" class="menu-link">
-                                <div data-i18n="Basic Inputs">Vendas em aberto</div>
+                                <div data-i18n="Basic Inputs">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Vendas por vendedor</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Ticket médio por vendedor</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Vendas por pagamentos</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Vendas totais por item</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Vendas por PDV</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Vendas por período</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -542,32 +542,32 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
-                        <div data-i18n="Form Elements">Produtos</div>
+                        <div data-i18n="Form Elements">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="forms-basic-inputs.html" class="menu-link">
-                                <div data-i18n="Basic Inputs">Compras realizadas</div>
+                                <div data-i18n="Basic Inputs">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Lista de preços</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Item vendido por cliente</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Curva ABC de itens vendidos</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Lucratividade por produto</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -575,32 +575,32 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
-                        <div data-i18n="Form Elements">Estoque</div>
+                        <div data-i18n="Form Elements">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="forms-basic-inputs.html" class="menu-link">
-                                <div data-i18n="Basic Inputs">Compras em aberto</div>
+                                <div data-i18n="Basic Inputs">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Localização e status</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Kardex</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Itens com estoque baixo</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Curva ABC de itens em estoque</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -608,27 +608,27 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
-                        <div data-i18n="Form Elements">Clientes</div>
+                        <div data-i18n="Form Elements">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="forms-basic-inputs.html" class="menu-link">
-                                <div data-i18n="Basic Inputs">Aniversário dos clientes</div>
+                                <div data-i18n="Basic Inputs">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Newsletter</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Curva ABC de clientes</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="forms-input-groups.html" class="menu-link">
-                                <div data-i18n="Input groups">Carteira de clientes</div>
+                                <div data-i18n="Input groups">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -636,17 +636,17 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
-                        <div data-i18n="Form Layouts">PDV</div>
+                        <div data-i18n="Form Layouts">Lorem Ipsum</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="form-layouts-vertical.html" class="menu-link">
-                                <div data-i18n="Vertical Form">Auditoria operacional</div>
+                                <div data-i18n="Vertical Form">Lorem Ipsum</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="form-layouts-horizontal.html" class="menu-link">
-                                <div data-i18n="Horizontal Form">Operações PDV</div>
+                                <div data-i18n="Horizontal Form">Lorem Ipsum</div>
                             </a>
                         </li>
                     </ul>
@@ -655,7 +655,7 @@
                 <li class="menu-item">
                     <a href="tables-basic.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-table"></i>
-                        <div data-i18n="Tables">Tables</div>
+                        <div data-i18n="Tables">Lorem Ipsum</div>
                     </a>
                 </li>
             </ul>
