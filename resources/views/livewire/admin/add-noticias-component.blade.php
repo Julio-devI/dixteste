@@ -111,39 +111,58 @@
             <h4 class="py-3 mb-4"><span class="text-muted fw-light">Adicionar /</span> Noticia</h4>
 
             <div class="row">
+                @if(Session::has('message'))
+                    <div class="alert alert-success" role="alert">
+                        {{ Session::get('message') }}
+                    </div>
+                @endif
+
                 <div class="col-xl-6">
                     <!-- HTML5 Inputs -->
                     <div class="card mb-4">
                         <h5 class="card-header">Adicionar</h5>
                         <div class="card-body">
-                            <div class="mb-3 row">
-                                <label for="html5-text-input" class="col-md-2 col-form-label">Titulo</label>
-                                <div class="col-md-10">
-                                    <input class="form-control" type="text" value="Sneat" id="html5-text-input" />
+                            <form wire:submit.prevent='adicionaNoticia' action="">
+                                <div class="mb-3 row">
+                                    <label for="titulo" class="col-md-2 col-form-label">Titulo</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" placeholder="Insira o titulo da noticia" name="titulo" wire:model="titulo"/>
+                                        @error('titulo')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="html5-search-input" class="col-md-2 col-form-label">Subtitulo</label>
-                                <div class="col-md-10">
-                                    <input class="form-control" type="search" value="Search ..." id="html5-search-input" />
+                                <div class="mb-3 row">
+                                    <label for="subtitulo" class="col-md-2 col-form-label">Subtitulo</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" placeholder="Insira o subtitulo" name="subtitulo" wire:model="subtitulo"/>
+                                        @error('subtitulo')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="html5-email-input" class="col-md-2 col-form-label">Descrição</label>
-                                <div class="col-md-10">
-                                    <input class="form-control" type="email" value="john@example.com" id="html5-email-input" />
+                                <div class="mb-3 row">
+                                    <label for="descricao" class="col-md-2 col-form-label">Descrição</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" placeholder="Insira a descricao da noticia" name="descricao" wire:model="descricao"/>
+                                        @error('descricao')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="html5-url-input" class="col-md-2 col-form-label">Id do usuario</label>
-                                <div class="col-md-10">
-                                    <input
-                                        class="form-control"
-                                        type="url"
-                                        value="https://themeselection.com"
-                                        id="html5-url-input" />
+                                <div class="mb-3 row">
+                                    <label for="user_id" class="col-md-2 col-form-label">Id do usuario</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" placeholder="Insira o id do usuario associado a noticia" name="user_id"  wire:model="user_id"/>
+                                        @error('user_id')
+                                            <p class="text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="mb-3 row">
+                                    <button type="submit" class="btn btn-primary float-end">Submit</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
