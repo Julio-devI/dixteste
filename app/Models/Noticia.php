@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Noticia extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'titulo',
+        'subtitulo',
+        'descricao',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
