@@ -136,12 +136,12 @@
 
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('admin.usuarios') }}" class="menu-link">
                                 <div data-i18n="Without menu">Todos os usuarios</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-without-navbar.html" class="menu-link">
+                            <a href="{{ route('admin.add.usuarios') }}" class="menu-link">
                                 <div data-i18n="Without navbar">Adicionar usuario</div>
                             </a>
                         </li>

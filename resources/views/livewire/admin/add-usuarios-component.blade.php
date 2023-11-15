@@ -125,7 +125,7 @@
                                 <div class="mb-3 row">
                                     <label for="nome" class="col-md-2 col-form-label">Nome</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" placeholder="Insira o nome do usuario" name="nome" wire:model="name"/>
+                                        <input class="form-control" type="text" placeholder="Insira o nome do usuario" name="nome" wire:model="nome"/>
                                         @error('nome')
                                             <p class="text-danger">{{ $message }}</p>
                                         @enderror

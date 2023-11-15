@@ -112,7 +112,7 @@
 
             <!-- Basic Bootstrap Table -->
             <div class="card">
-                <h5 class="card-header">Noticias</h5>
+                <h5 class="card-header">Usuarios</h5>
                 <div class="table-responsive text-nowrap">
                     <table class="table">
                         <thead>
@@ -129,19 +129,19 @@
                             <tr>
                                 <td>
                                     <i class="fab fa-angular fa-lg text-danger me-3"></i>
-                                    <span class="fw-medium">{{ $noticia->id }}</span>
+                                    <span class="fw-medium">{{ $usuario->id }}</span>
                                 </td>
-                                <td>{{ $noticia->titulo }}</td>
-                                <td>{{ $noticia->subtitulo }}</td>
-                                <td>{{ $noticia->user_id }}</td>
+                                <td>{{ $usuario->name }}</td>
+                                <td>{{ $usuario->email }}</td>
+                                <td>{{ $usuario->utype }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="{{ route('admin.edit.noticias', ['noticia_id' => $noticia->id]) }}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                            <a class="dropdown-item" href="#" onclick="deleteConfirmation({{ $noticia->id }})"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            <a class="dropdown-item" href="{{ route('admin.edit.usuarios', ['usuario_id' => $usuario->id]) }}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                            <a class="dropdown-item" href="#" onclick="deleteConfirmation({{ $usuario->id }})"><i class="bx bx-trash me-1"></i> Delete</a>
                                         </div>
                                     </div>
                                 </td>
@@ -164,7 +164,7 @@
                         <div class="text-center col-md-12">
                             <h4 class="pb-3">Tem certeza que deseja apagar esse registro ?</h4>
                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#deleteConfirmation">Cancel</button>
-                            <button type="button" class="btn btn-danger" onclick="deleteNoticia()">Delete</button>
+                            <button type="button" class="btn btn-danger" onclick="deleteUsuario()">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -177,12 +177,12 @@
 <script>
     function deleteConfirmation(id)
     {
-    @this.set('noticia_id', id);
+    @this.set('usuario_id', id);
         $('#deleteConfirmation').modal('show');
     }
-    function deleteNoticia()
+    function deleteUsuario()
     {
-    @this.call('deleteNoticia');
+    @this.call('deleteUsuario');
         $('#deleteConfirmation').modal('hide');
     }
 </script>

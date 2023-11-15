@@ -107,7 +107,7 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="py-3 mb-4"><span class="text-muted fw-light">Adicionar /</span> Usuario</h4>
+            <h4 class="py-3 mb-4"><span class="text-muted fw-light">Editar /</span> Usuario</h4>
 
             <div class="row">
                 @if(Session::has('message'))
@@ -119,13 +119,13 @@
                 <div class="col-xl-6">
                     <!-- HTML5 Inputs -->
                     <div class="card mb-4">
-                        <h5 class="card-header">Adicionar</h5>
+                        <h5 class="card-header">Editar</h5>
                         <div class="card-body">
                             <form wire:submit.prevent='adicionaUsuario' action="">
                                 <div class="mb-3 row">
                                     <label for="nome" class="col-md-2 col-form-label">Nome</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" placeholder="Insira o nome do usuario" name="nome" wire:model="name"/>
+                                        <input class="form-control" type="text" placeholder="Insira o nome do usuario" name="nome" wire:model="nome"/>
                                         @error('nome')
                                         <p class="text-danger">{{ $message }}</p>
                                         @enderror
