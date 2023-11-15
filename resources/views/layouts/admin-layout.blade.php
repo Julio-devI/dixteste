@@ -115,6 +115,11 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item active">
+                            <a href="{{ route('admin.dashboard') }}" class="menu-link">
+                                <div data-i18n="Analytics">Todas as Noticias</div>
+                            </a>
+                        </li>
+                        <li class="menu-item active">
                             <a href="{{ route('admin.add.noticias') }}" class="menu-link">
                                 <div data-i18n="Analytics">Adicionar Noticias</div>
                             </a>
@@ -126,18 +131,18 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-layout"></i>
-                        <div data-i18n="Layouts">Lorem Ipsum</div>
+                        <div data-i18n="Layouts">Usuarios</div>
                     </a>
 
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="#" class="menu-link">
-                                <div data-i18n="Without menu">Lorem Ipsum</div>
+                                <div data-i18n="Without menu">Todos os usuarios</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="layouts-without-navbar.html" class="menu-link">
-                                <div data-i18n="Without navbar">Lorem Ipsum</div>
+                                <div data-i18n="Without navbar">Adicionar usuario</div>
                             </a>
                         </li>
                         <li class="menu-item">
