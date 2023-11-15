@@ -141,7 +141,7 @@
                                             </button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="{{ route('admin.edit.noticias', ['noticia_id' => $noticia->id]) }}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" onclick="deleteConfirmation({{ $noticia->id }})"><i class="bx bx-trash me-1"></i> Delete</a>
                                             </div>
                                         </div>
                                     </td>
@@ -156,4 +156,34 @@
         <div class="content-backdrop fade"></div>
     </div>
     <!-- Content wrapper -->
+    <div class="modal" id="deleteConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body pb-30 pt-30">
+                    <div class="row">
+                        <div class="text-center col-md-12">
+                            <h4 class="pb-3">Tem certeza que deseja apagar esse registro ?</h4>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#deleteConfirmation">Cancel</button>
+                            <button type="button" class="btn btn-danger" onclick="deleteNoticia()">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+    <script>
+        function deleteConfirmation(id)
+        {
+            @this.set('noticia_id', id);
+            $('#deleteConfirmation').modal('show');
+        }
+        function deleteNoticia()
+        {
+            @this.call('deleteNoticia');
+            $('#deleteConfirmation').modal('hide');
+        }
+    </script>
+
