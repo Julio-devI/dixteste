@@ -122,13 +122,13 @@
                     <div class="card mb-4">
                         <h5 class="card-header">Adicionar</h5>
                         <div class="card-body">
-                            <form wire:submit.prevent='adicionaNoticia' action="">
+                            <form wire:submit.prevent='updateNoticia' action="">
                                 <div class="mb-3 row">
                                     <label for="titulo" class="col-md-2 col-form-label">Titulo</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" placeholder="Insira o titulo da noticia" name="titulo" wire:model="titulo"/>
                                         @error('titulo')
-                                        <p class="text-danger">{{ $message }}</p>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" placeholder="Insira o subtitulo" name="subtitulo" wire:model="subtitulo"/>
                                         @error('subtitulo')
-                                        <p class="text-danger">{{ $message }}</p>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" placeholder="Insira a descricao da noticia" name="descricao" wire:model="descricao"/>
                                         @error('descricao')
-                                        <p class="text-danger">{{ $message }}</p>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                                     <div class="col-md-10">
                                         <input class="form-control" type="text" placeholder="Insira o id do usuario associado a noticia" name="user_id"  wire:model="user_id"/>
                                         @error('user_id')
-                                        <p class="text-danger">{{ $message }}</p>
+                                            <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>

@@ -56,6 +56,6 @@ class EditNoticiasComponent extends Component
 
     public function render()
     {
-        return view('livewire.admin.edit-noticias-component');
+        return view('livewire.admin.edit-noticias-component')->layout('layouts.admin-layout');
     }
 }
