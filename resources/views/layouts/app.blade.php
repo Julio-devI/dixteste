@@ -1,691 +1,375 @@
-@php use Illuminate\Support\Facades\Auth; @endphp
-    <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="MkRqEzTGuoSx6LqJUm0OAKxSgNUYt26wTT7RMUZY">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/images/favicon.ico">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <meta name="theme-color" content="#e87316">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Surfside Media">
-    <meta name="msapplication-TileImage" content="assets/images/favicon.ico">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Surfside Media">
-    <meta name="keywords" content="Surfside Media">
-    <meta name="author" content="Surfside Media">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <title>SurfsideMedia</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link id="rtl-link" rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/vendors/ion.rangeSlider.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick/slick-theme.css">
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/demo4.css">
-    <style>
-        .h-logo {
-            max-width: 185px !important;
-        }
+    <title>Pod Talk - Free Bootstrap 5 CSS Template</title>
 
-        .f-logo {
-            max-width: 220px !important;
-        }
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        @media only screen and (max-width: 600px) {
-            .h-logo {
-                max-width: 110px !important;
-            }
-        }
-    </style>
-    @livewireStyles
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link href="css/templatemo-pod-talk.css" rel="stylesheet">
 </head>
 
-<body class="theme-color4 light ltr">
-<style>
-    header .profile-dropdown ul li {
-        display: block;
-        padding: 5px 20px;
-        border-bottom: 1px solid #ddd;
-        line-height: 35px;
-    }
+    <body>
 
-    header .profile-dropdown ul li:last-child {
-        border-color: #fff;
-    }
+    <main>
 
-    header .profile-dropdown ul {
-        padding: 10px 0;
-        min-width: 250px;
-    }
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand me-lg-5 me-0" href="index.html">
+                    <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                </a>
 
-    .name-usr {
-        background: #e87316;
-        padding: 8px 12px;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 24px;
-    }
+                <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
+                    <div class="input-group input-group-lg">
+                        <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast" aria-label="Search">
 
-    .name-usr span {
-        margin-right: 10px;
-    }
+                        <button type="submit" class="form-control" id="submit">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </form>
 
-    @media (max-width:600px) {
-        .h-logo {
-            max-width: 150px !important;
-        }
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        i.sidebar-bar {
-            font-size: 22px;
-        }
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
 
-        .mobile-menu ul li a svg {
-            width: 20px;
-            height: 20px;
-        }
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
 
-        .mobile-menu ul li a span {
-            margin-top: 0px;
-            font-size: 12px;
-        }
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 
-        .name-usr {
-            padding: 5px 12px;
-        }
-    }
-</style>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="listing-page.html">Listing Page</a></li>
 
-<header class="header-style-2" id="home">
-    <div class="main-header navbar-searchbar">
-        <div class="container-fluid-lg">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="main-menu">
-                        <div class="menu-left">
-                            <div class="brand-logo">
-                                <a href="#">
-                                    <img src="assets/images/logo.png" class="h-logo img-fluid blur-up lazyload"
-                                         alt="logo">
+                                <li><a class="dropdown-item" href="detail-page.html">Detail Page</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="ms-4">
+                        <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="latest-podcast-section section-padding pb-0" id="section_2">
+            <div class="container">
+            </div>
+        </section>
+
+        <section class="trending-podcast-section section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12">
+                        <div class="section-title-wrap mb-5">
+                            <h4 class="section-title">Noticias Gerais</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block custom-block-full">
+                            <div class="custom-block-image-wrap">
+                                <a href="detail-page.html">
+                                    <img src="images/podcast/27376480_7326766.jpg" class="custom-block-image img-fluid" alt="">
                                 </a>
                             </div>
 
-                        </div>
-                        <nav>
-                            <div class="main-navbar">
-                                <div id="mainnav">
-                                    <div class="toggle-nav">
-                                        <i class="fa fa-bars sidebar-bar"></i>
-                                    </div>
-                                    <ul class="nav-menu">
-                                        <li class="back-btn d-xl-none">
-                                            <div class="close-btn">
-                                                Menu
-                                                <span class="mobile-back"><i class="fa fa-angle-left"></i>
-                                                        </span>
-                                            </div>
-                                        </li>
-                                        <li><a href="#" class="nav-link menu-title">Home</a></li>
-                                        <li><a href="#" class="nav-link menu-title">Shop</a></li>
-                                        <li><a href="#" class="nav-link menu-title">Cart</a></li>
-                                        <li><a href="#" class="nav-link menu-title">About Us</a></li>
-                                        <li><a href="#" class="nav-link menu-title">Contact Us</a>
-                                        </li>
-                                        <li><a href="#" class="nav-link menu-title">Blog</a></li>
-                                    </ul>
+                            <div class="custom-block-info">
+                                <h5 class="mb-2">
+                                    <a href="detail-page.html">
+                                        Vintage Show
+                                    </a>
+                                </h5>
+
+                                <div class="profile-block d-flex">
+                                    <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">
+
+                                    <p>Elsa
+                                        <strong>Influencer</strong></p>
+                                </div>
+
+                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                    <a href="#" class="bi-headphones me-1">
+                                        <span>100k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-heart me-1">
+                                        <span>2.5k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-chat me-1">
+                                        <span>924k</span>
+                                    </a>
                                 </div>
                             </div>
-                        </nav>
-                        <div class="menu-right">
-                            <ul>
-                                <li>
-                                    <div class="search-box theme-bg-color">
-                                        <i data-feather="search"></i>
-                                    </div>
-                                </li>
-                                <li class="onhover-dropdown wislist-dropdown">
-                                    <div class="cart-media">
-                                        <a href="wishlist/list.html">
-                                            <i data-feather="heart"></i>
-                                            <span id="wishlist-count" class="label label-theme rounded-pill">
-                                                        0
-                                                    </span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="onhover-dropdown wislist-dropdown">
-                                    <div class="cart-media">
-                                        <a href="cart/list.html">
-                                            <i data-feather="shopping-cart"></i>
-                                            <span id="cart-count" class="label label-theme rounded-pill">
-                                                        0
-                                                    </span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="onhover-dropdown">
-                                    <div class="cart-media name-usr">
-                                        @auth()
-                                            <span>{{ Auth::user()->name }}</span>
-                                        @endauth
-                                        <i data-feather="user"></i>
-                                    </div>
-                                    <div class="onhover-div profile-dropdown">
-                                        <ul>
-                                            @if(Route::has('login'))
-                                                @auth()
-                                                    @if(Auth::user()->utype === 'ADM')
-                                                        <li>
-                                                            <a href="#" class="d-block">Dashboard</a>
-                                                        </li>
-                                                    @else
-                                                        <li>
-                                                            <a href="#" class="d-block">My account</a>
-                                                        </li>
-                                                    @endif
-                                                    <li>
-                                                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('frmlogout').submit();" class="d-block">Logout</a>
-                                                        <form id="frmlogout" action="{{ route('logout') }}" method="POST">
-                                                            @csrf
-                                                        </form>
-                                                    </li>
-                                                @else
-                                                    <li>
-                                                        <a href="{{ route('login') }}" class="d-block">Login</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ route('register') }}" class="d-block">Register</a>
-                                                    </li>
-                                                @endauth
-                                            @endif
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="search-full">
-                            <form method="GET" class="search-full" action="http://localhost:8000/search">
-                                <div class="input-group">
-                                            <span class="input-group-text">
-                                                <i data-feather="search" class="font-light"></i>
-                                            </span>
-                                    <input type="text" name="q" class="form-control search-type"
-                                           placeholder="Search here..">
-                                    <span class="input-group-text close-search">
-                                                <i data-feather="x" class="font-light"></i>
-                                            </span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
-<div class="mobile-menu d-sm-none">
-    <ul>
-        <li>
-            <a href="demo3.php" class="active">
-                <i data-feather="home"></i>
-                <span>Home</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">
-                <i data-feather="align-justify"></i>
-                <span>Category</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">
-                <i data-feather="shopping-bag"></i>
-                <span>Cart</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">
-                <i data-feather="heart"></i>
-                <span>Wishlist</span>
-            </a>
-        </li>
-        <li>
-            <a href="user-dashboard.php">
-                <i data-feather="user"></i>
-                <span>Account</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<style>
-    input [type="text"]:focus,
-    [type="email"]:focus,
-    [type="url"]:focus,
-    [type="password"]:focus,
-    [type="number"]:focus,
-    [type="date"]:focus,
-    [type="datetime-local"]:focus,
-    [type="month"]:focus,
-    [type="search"]:focus,
-    [type="tel"]:focus,
-    [type="time"]:focus,
-    [type="week"]:focus,
-    [multiple]:focus,
-    textarea:focus,
-    select:focus {
-        --tw-ring-color: transparent !important;
-        border-color: transparent !important;
-    }
+                            <div class="social-share d-flex flex-column ms-auto">
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-heart"></i>
+                                </a>
 
-    input [type="text"]:hover,
-    [type="email"]:hover,
-    [type="url"]:hover,
-    [type="password"]:hover,
-    [type="number"]:hover,
-    [type="date"]:hover,
-    [type="datetime-local"]:hover,
-    [type="month"]:hover,
-    [type="search"]:hover,
-    [type="tel"]:hover,
-    [type="time"]:hover,
-    [type="week"]:hover,
-    [multiple]:hover,
-    textarea:hover,
-    select:hover {
-        --tw-ring-color: transparent !important;
-        border-color: transparent !important;
-    }
-
-    input [type="text"]:active,
-    [type="email"]:active,
-    [type="url"]:active,
-    [type="password"]:active,
-    [type="number"]:active,
-    [type="date"]:active,
-    [type="datetime-local"]:active,
-    [type="month"]:active,
-    [type="search"]:active,
-    [type="tel"]:active,
-    [type="time"]:active,
-    [type="week"]:active,
-    [multiple]:active,
-    textarea:active,
-    select:active {
-        --tw-ring-color: transparent !important;
-        border-color: transparent !important;
-    }
-</style>
-
-<!-- Content Section Start -->
-{{$slot}}
-<!-- Content Section End -->
-
-<footer class="footer-sm-space mt-5">
-    <div class="main-footer">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="footer-contact">
-                        <div class="brand-logo">
-                            <a href="index.htm" class="footer-logo float-start">
-                                <img src="assets/images/logo.png" class="f-logo img-fluid blur-up lazyload"
-                                     alt="logo">
-                            </a>
-                        </div>
-                        <ul class="contact-lists" style="clear:both;">
-                            <li>
-                                <span><b>phone:</b> <span class="font-light"> +1 0000000000</span></span>
-                            </li>
-                            <li>
-                                        <span><b>Address:</b><span class="font-light"> NIT, Faridabad, Haryana,
-                                                India</span></span>
-                            </li>
-                            <li>
-                                <span><b>Email:</b><span class="font-light"> contact@surfsidemedia.in</span></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="footer-links">
-                        <div class="footer-title">
-                            <h3>About us</h3>
-                        </div>
-                        <div class="footer-content">
-                            <ul>
-                                <li>
-                                    <a href="index.htm" class="font-dark">Home</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html" class="font-dark">Shop</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html" class="font-dark">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="font-dark">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="contact-us.html" class="font-dark">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="footer-links">
-                        <div class="footer-title">
-                            <h3>New Categories</h3>
-                        </div>
-                        <div class="footer-content">
-                            <ul>
-                                <li>
-                                    <a href="shop.html" class="font-dark">Latest Shoes</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html" class="font-dark">Branded Jeans</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html" class="font-dark">New Jackets</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html" class="font-dark">Colorfull Hoodies</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html" class="font-dark">Shiner Goggles</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="footer-links">
-                        <div class="footer-title">
-                            <h3>Get Help</h3>
-                        </div>
-                        <div class="footer-content">
-                            <ul>
-                                <li>
-                                    <a href="#" class="font-dark">Your Orders</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="font-dark">Your Account</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="font-dark">Track Orders</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="font-dark">Your Wishlist</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="font-dark">Shopping FAQs</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                    <div class="footer-newsletter">
-                        <h3>Let’s stay in touch</h3>
-                        <div class="form-newsletter">
-                            <div class="input-group mb-4">
-                                <input type="text" class="form-control color-4" placeholder="Your Email Address">
-                                <span class="input-group-text" id="basic-addon4"><i
-                                        class="fas fa-arrow-right"></i></span>
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-bookmark"></i>
+                                </a>
                             </div>
-                            <p class="font-dark mb-0">Keep up to date with our latest news and special offers.
-                            </p>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block custom-block-full">
+                            <div class="custom-block-image-wrap">
+                                <a href="detail-page.html">
+                                    <img src="images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="custom-block-info">
+                                <h5 class="mb-2">
+                                    <a href="detail-page.html">
+                                        Vintage Show
+                                    </a>
+                                </h5>
+
+                                <div class="profile-block d-flex">
+                                    <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="profile-block-image img-fluid" alt="">
+
+                                    <p>
+                                        Taylor
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                        <strong>Creator</strong>
+                                    </p>
+                                </div>
+
+                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                    <a href="#" class="bi-headphones me-1">
+                                        <span>100k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-heart me-1">
+                                        <span>2.5k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-chat me-1">
+                                        <span>924k</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="social-share d-flex flex-column ms-auto">
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-heart"></i>
+                                </a>
+
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-bookmark"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="custom-block custom-block-full">
+                            <div class="custom-block-image-wrap">
+                                <a href="detail-page.html">
+                                    <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="custom-block-info">
+                                <h5 class="mb-2">
+                                    <a href="detail-page.html">
+                                        Daily Talk
+                                    </a>
+                                </h5>
+
+                                <div class="profile-block d-flex">
+                                    <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
+
+                                    <p>
+                                        William
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                        <strong>Vlogger</strong></p>
+                                </div>
+
+                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                    <a href="#" class="bi-headphones me-1">
+                                        <span>100k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-heart me-1">
+                                        <span>2.5k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-chat me-1">
+                                        <span>924k</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="social-share d-flex flex-column ms-auto">
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-heart"></i>
+                                </a>
+
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-bookmark"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="sub-footer">
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="row gy-3">
-                <div class="col-md-6">
-                    <ul>
-                        <li class="font-dark">We accept:</li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="assets/images/payment-icon/1.jpg" class="img-fluid blur-up lazyload"
-                                     alt="payment icon">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                    <div class="subscribe-form-wrap">
+                        <h6>Subscribe. Every weekly.</h6>
+
+                        <form class="custom-form subscribe-form" action="#" method="get" role="form">
+                            <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address" required="">
+
+                            <div class="col-lg-12 col-12">
+                                <button type="submit" class="form-control" id="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
+                    <h6 class="site-footer-title mb-3">Contact</h6>
+
+                    <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
+
+                    <p>
+                        <strong class="d-inline me-2">Email:</strong>
+                        <a href="#">inquiry@pod.co</a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h6 class="site-footer-title mb-3">Download Mobile</h6>
+
+                    <div class="site-footer-thumb mb-4 pb-2">
+                        <div class="d-flex flex-wrap">
+                            <a href="#">
+                                <img src="images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid" alt="">
                             </a>
+
+                            <a href="#">
+                                <img src="images/play-store.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <h6 class="site-footer-title mb-3">Social</h6>
+
+                    <ul class="social-icon">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="assets/images/payment-icon/2.jpg" class="img-fluid blur-up lazyload"
-                                     alt="payment icon">
-                            </a>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-twitter"></a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="assets/images/payment-icon/3.jpg" class="img-fluid blur-up lazyload"
-                                     alt="payment icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <img src="assets/images/payment-icon/4.jpg" class="img-fluid blur-up lazyload"
-                                     alt="payment icon">
-                            </a>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6">
-                    <p class="mb-0 font-dark">© 2023, Surfside Media.</p>
+
+            </div>
+        </div>
+
+        <div class="container pt-5">
+            <div class="row align-items-center">
+
+                <div class="col-lg-2 col-md-3 col-12">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                    </a>
+                </div>
+
+                <div class="col-lg-7 col-md-9 col-12">
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Homepage</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Browse episodes</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Help Center</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                    <p class="copyright-text mb-0">Copyright © 2036 Talk Pod Company
+                        <br><br>
+                        Design: <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<div class="modal fade newletter-modal" id="newsletter">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content ">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+    </footer>
 
-            <div class="modal-body">
-                <img src="assets/images/newletter-icon.png" class="img-fluid blur-up lazyload" alt="">
-                <div class="modal-title">
-                    <h2 class="tt-title">Sign up for our Newsletter!</h2>
-                    <p class="font-light">Never miss any new updates or products we reveal, stay up to date.</p>
-                    <p class="font-light">Oh, and it's free!</p>
 
-                    <div class="input-group mb-3">
-                        <input placeholder="Email" class="form-control" type="text">
-                    </div>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
 
-                    <div class="cancel-button text-center">
-                        <button class="btn default-theme w-100" data-bs-dismiss="modal"
-                                type="button">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade cart-modal" id="addtocart" tabindex="-1" role="dialog" aria-label="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content ">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-                <div class="modal-contain">
-                    <div>
-                        <div class="modal-messages">
-                            <i class="fas fa-check"></i> 3-stripes full-zip hoodie successfully added to
-                            you cart.
-                        </div>
-                        <div class="modal-product">
-                            <div class="modal-contain-img">
-                                <img src="assets/images/fashion/instagram/4.jpg" class="img-fluid blur-up lazyload"
-                                     alt="">
-                            </div>
-                            <div class="modal-contain-details">
-                                <h4>Premier Cropped Skinny Jean</h4>
-                                <p class="font-light my-2">Yellow, Qty : 3</p>
-                                <div class="product-total">
-                                    <h5>TOTAL : <span>$1,140.00</span></h5>
-                                </div>
-                                <div class="shop-cart-button mt-3">
-                                    <a href="shop-left-sidebar.php"
-                                       class="btn default-light-theme conti-button default-theme default-theme-2 rounded">CONTINUE
-                                        SHOPPING</a>
-                                    <a href="cart.php"
-                                       class="btn default-light-theme conti-button default-theme default-theme-2 rounded">VIEW
-                                        CART</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ratio_asos mt-4">
-                    <div class="container">
-                        <div class="row m-0">
-                            <div class="col-sm-12 p-0">
-                                <div
-                                    class="product-wrapper product-style-2 slide-4 p-0 light-arrow bottom-space spacing-slider">
-                                    <div>
-                                        <div class="product-box">
-                                            <div class="img-wrapper">
-                                                <div class="front">
-                                                    <a href="details.php">
-                                                        <img src="assets/images/fashion/product/front/1.jpg"
-                                                             class="bg-img blur-up lazyload" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product-details text-center">
-                                                <div class="rating-details d-block text-center">
-                                                    <span class="font-light grid-content">B&Y Jacket</span>
-                                                </div>
-                                                <div class="main-price mt-0 d-block text-center">
-                                                    <h3 class="theme-color">$78.00</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class="product-box">
-                                            <div class="img-wrapper">
-                                                <div class="front">
-                                                    <a href="details.php">
-                                                        <img src="assets/images/fashion/product/front/2.jpg"
-                                                             class="bg-img blur-up lazyload" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product-details text-center">
-                                                <div class="rating-details d-block text-center">
-                                                    <span class="font-light grid-content">B&Y Jacket</span>
-                                                </div>
-                                                <div class="main-price mt-0 d-block text-center">
-                                                    <h3 class="theme-color">$78.00</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class="product-box">
-                                            <div class="img-wrapper">
-                                                <div class="front">
-                                                    <a href="details.php">
-                                                        <img src="assets/images/fashion/product/front/3.jpg"
-                                                             class="bg-img blur-up lazyload" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product-details text-center">
-                                                <div class="rating-details d-block text-center">
-                                                    <span class="font-light grid-content">B&Y Jacket</span>
-                                                </div>
-                                                <div class="main-price mt-0 d-block text-center">
-                                                    <h3 class="theme-color">$78.00</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class="product-box">
-                                            <div class="img-wrapper">
-                                                <div class="front">
-                                                    <a href="details.php">
-                                                        <img src="assets/images/fashion/product/front/4.jpg"
-                                                             class="bg-img blur-up lazyload" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product-details text-center">
-                                                <div class="rating-details d-block text-center">
-                                                    <span class="font-light grid-content">B&Y Jacket</span>
-                                                </div>
-                                                <div class="main-price mt-0 d-block text-center">
-                                                    <h3 class="theme-color">$78.00</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="tap-to-top">
-    <a href="#home">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-</div>
-
-<div class="bg-overlay"></div>
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="assets/js/feather/feather.min.js"></script>
-<script src="assets/js/lazysizes.min.js"></script>
-<script src="assets/js/slick/slick.js"></script>
-<script src="assets/js/slick/slick-animation.min.js"></script>
-<script src="assets/js/slick/custom_slick.js"></script>
-<script src="assets/js/price-filter.js"></script>
-<script src="assets/js/ion.rangeSlider.min.js"></script>
-<script src="assets/js/filter.js"></script>
-<script src="assets/js/newsletter.js"></script>
-<script src="assets/js/cart_modal_resize.js"></script>
-<script src="assets/js/bootstrap/bootstrap-notify.min.js"></script>
-<script src="assets/js/theme-setting.js"></script>
-<script src="assets/js/script.js"></script>
-<script>
-    $(function () {
-        $('[data-bs-toggle="tooltip"]').tooltip()
-    });
-</script>
-@livewireScripts
-</body>
-
+    </body>
 </html>
