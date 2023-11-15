@@ -32,7 +32,7 @@ class AddNoticiasComponent extends Component
         ]);
 
         $noticia = new Noticia();
-
+        
         $noticia->user_id = $this->user_id;
         $noticia->titulo = $this->titulo;
         $noticia->subtitulo = $this->subtitulo;
