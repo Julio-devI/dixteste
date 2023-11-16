@@ -8,6 +8,6 @@ class NoticiasComponent extends Component
 {
     public function render()
     {
-        return view('livewire.admin.noticias-component');
+        return view('livewire.noticias-component', ['noticias' => auth()->user()->noticias])->layout('layouts.app');
     }
 }

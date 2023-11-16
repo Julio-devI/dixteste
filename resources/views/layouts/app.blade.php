@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Facades\Auth; @endphp
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pod Talk - Free Bootstrap 5 CSS Template</title>
+    <title>Noticias</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,25 +17,24 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-icons.css') }}">
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
 
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
 
-    <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/templatemo-pod-talk.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
-
     <body>
-
     <main>
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand me-lg-5 me-0" href="index.html">
-                    <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                    <img src="{{ asset('assets/images/pod-talk-logo.png') }}" class="logo-image img-fluid" alt="templatemo pod talk">
                 </a>
 
                 <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
@@ -74,11 +74,49 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-                    </ul>
+                        @if(Route::has('login'))
+                            @auth()
+                                @if(Auth::user()->utype === 'ADM')
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
 
-                    <div class="ms-4">
-                        <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
-                    </div>
+                                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                                            <li>
+                                                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('frmlogout').submit();" class="dropdown-item">Logout</a>
+                                                <form id="frmlogout" action="{{ route('logout') }}" method="POST">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
+
+                                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Minha conta</a></li>
+                                            <li>
+                                                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('frmlogout').submit();" class="dropdown-item">Logout</a>
+                                                <form id="frmlogout" action="{{ route('logout') }}" method="POST">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                               @endif
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">seunome</a>
+
+                                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                                        </ul>
+                                    </li>
+                            @endauth
+                        @endif
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -88,177 +126,7 @@
             </div>
         </section>
 
-        <section class="trending-podcast-section section-padding">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12">
-                        <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Noticias Gerais</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-page.html">
-                                    <img src="images/podcast/27376480_7326766.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-page.html">
-                                        Vintage Show
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">
-
-                                    <p>Elsa
-                                        <strong>Influencer</strong></p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
-
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-page.html">
-                                    <img src="images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-page.html">
-                                        Vintage Show
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="profile-block-image img-fluid" alt="">
-
-                                    <p>
-                                        Taylor
-                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                        <strong>Creator</strong>
-                                    </p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
-
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-page.html">
-                                    <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-page.html">
-                                        Daily Talk
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
-
-                                    <p>
-                                        William
-                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                        <strong>Vlogger</strong></p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
-
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        {{ $slot }}
     </main>
 
 
@@ -331,7 +199,7 @@
 
                 <div class="col-lg-2 col-md-3 col-12">
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                        <img src="{{ asset('assets/images/pod-talk-logo.png') }}" class="logo-image img-fluid" alt="templatemo pod talk">
                     </a>
                 </div>
 
@@ -366,10 +234,10 @@
 
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/custom.js"></script>
-
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    @livewireScripts
     </body>
 </html>
