@@ -121,7 +121,7 @@
                     <div class="card mb-4">
                         <h5 class="card-header">Editar</h5>
                         <div class="card-body">
-                            <form wire:submit.prevent='adicionaUsuario' action="">
+                            <form wire:submit.prevent='updateUsuario' action="">
                                 <div class="mb-3 row">
                                     <label for="nome" class="col-md-2 col-form-label">Nome</label>
                                     <div class="col-md-10">

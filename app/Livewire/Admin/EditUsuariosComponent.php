@@ -33,7 +33,7 @@ class EditUsuariosComponent extends Component
         ]);
     }
 
-    public function updateNoticia()
+    public function updateUsuario()
     {
         $this->validate([
             'nome' => 'required',
