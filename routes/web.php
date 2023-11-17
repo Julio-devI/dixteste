@@ -8,6 +8,7 @@
     use App\Livewire\Admin\EditUsuariosComponent;
     use App\Livewire\Admin\UsuariosComponent;
     use App\Livewire\NoticiasComponent;
+    use App\Livewire\SearchComponent;
     use Illuminate\Support\Facades\Route;
 
     /*
